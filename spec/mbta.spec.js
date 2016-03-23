@@ -15,7 +15,7 @@ describe('mbta', () => {
     });
 
     it('goes from "Central" to "Porter"', () => {
-      expect(mbta.stopsBetweenStations('Red', 'Central', 'Red', 'South Station')).toBe(2);
+      expect(mbta.stopsBetweenStations('Red', 'Central', 'Red', 'Porter')).toBe(2);
     });
 
   });
