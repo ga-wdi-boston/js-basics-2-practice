@@ -19,11 +19,11 @@ describe('mbta', () => {
   describe('Green Line', () => {
 
     it('goes from "Haymarket" to "Copley"', () => {
-      expect(mbta.stopsBetweenStations('Green', 'Haymarket', 'Green', 'Copley')).toBe(4);
+      expect(mbta.stopsBetweenStations('Green', 'Haymarket', 'Green', 'Copley')).toBe(3);
     });
 
     it('goes from "Copley" to "Haymarket"', () => {
-      expect(mbta.stopsBetweenStations('Green', 'Copley', 'Green', 'Haymarket')).toBe(4);
+      expect(mbta.stopsBetweenStations('Green', 'Copley', 'Green', 'Haymarket')).toBe(3);
     });
 
   });
@@ -45,11 +45,11 @@ describe('mbta', () => {
   describe('Red and Green Lines', () => {
 
     it('goes from "South Station" to "Kenmore"', () => {
-      expect(mbta.stopsBetweenStations('Red', 'South Station', 'Green', 'Kenmore')).toBe(6);
+      expect(mbta.stopsBetweenStations('Red', 'South Station', 'Green', 'Kenmore')).toBe(7);
     });
 
     it('goes from "Government Center" to "Alewife"', () => {
-      expect(mbta.stopsBetweenStations('Green', 'Government Center', 'Red', 'Alewife')).toBe(8);
+      expect(mbta.stopsBetweenStations('Green', 'Government Center', 'Red', 'Alewife')).toBe(7);
     });
 
   });
@@ -57,11 +57,11 @@ describe('mbta', () => {
   describe('Red and Orange Lines', () => {
 
     it('goes from "South Station" to "Forest Hills"', () => {
-      expect(mbta.stopsBetweenStations('Red', 'South Station', 'Orange', 'Forest Hills')).toBe(6);
+      expect(mbta.stopsBetweenStations('Red', 'South Station', 'Orange', 'Forest Hills')).toBe(7);
     });
 
     it('goes from "North Station" to "Alewife"', () => {
-      expect(mbta.stopsBetweenStations('Orange', 'North Station', 'Red', 'Alewife')).toBe(8);
+      expect(mbta.stopsBetweenStations('Orange', 'North Station', 'Red', 'Alewife')).toBe(7);
     });
 
   });
