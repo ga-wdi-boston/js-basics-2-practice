@@ -14,6 +14,10 @@ describe('mbta', () => {
       expect(mbta.stopsBetweenStations('Red', 'South Station', 'Red', 'Alewife')).toBe(7);
     });
 
+    it('goes from "Central" to "Porter"', () => {
+      expect(mbta.stopsBetweenStations('Red', 'Central', 'Red', 'Porter')).toBe(2);
+    });
+
   });
 
   describe('Green Line', () => {
@@ -24,6 +28,10 @@ describe('mbta', () => {
 
     it('goes from "Copley" to "Haymarket"', () => {
       expect(mbta.stopsBetweenStations('Green', 'Kenmore', 'Green', 'Government Center')).toBe(6);
+    });
+
+    it('goes from "Kenmore" to "Arlington"', () => {
+      expect(mbta.stopsBetweenStations('Green', 'Kenmore', 'Green', 'Arlington')).toBe(3);
     });
 
   });
@@ -38,6 +46,10 @@ describe('mbta', () => {
     it('goes from "Forest Hills" to "North Station"', () => {
       expect(mbta.stopsBetweenStations('Orange', 'Forest Hills', 'Orange',
                                        'North Station')).toBe(7);
+    });
+
+    it('goes from "State" to "Downtown Crossing"', () => {
+      expect(mbta.stopsBetweenStations('Orange', 'State', 'Orange', 'Downtown Crossing')).toBe(1);
     });
 
   });
