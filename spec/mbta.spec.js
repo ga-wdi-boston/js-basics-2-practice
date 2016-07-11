@@ -1,5 +1,8 @@
 'use strict';
 
+const chai = require('chai');
+const expect = chai.expect;
+
 const mbta = require('../lib/mbta.js');
 
 describe('mbta', () => {
@@ -7,11 +10,11 @@ describe('mbta', () => {
   describe('Red Line', () => {
 
     it('goes from "Alewife" to "South Station"', () => {
-      expect(mbta.stopsBetweenStations('Red', 'Alewife', 'Red', 'South Station')).toBe(7);
+      expect(mbta.stopsBetweenStations('Red', 'Alewife', 'Red', 'South Station')).to.equal(7);
     });
 
     it('goes from "South Station" to "Alewife"', () => {
-      expect(mbta.stopsBetweenStations('Red', 'South Station', 'Red', 'Alewife')).toBe(7);
+      expect(mbta.stopsBetweenStations('Red', 'South Station', 'Red', 'Alewife')).to.equal(7);
     });
 
   });
@@ -19,11 +22,13 @@ describe('mbta', () => {
   describe('Green Line', () => {
 
     it('goes from "Haymarket" to "copley"', () => {
-      expect(mbta.stopsBetweenStations('Green', 'Government Center', 'Green', 'Kenmore')).toBe(6);
+      expect(mbta.stopsBetweenStations('Green', 'Government Center',
+        'Green', 'Kenmore')).to.equal(6);
     });
 
     it('goes from "Copley" to "Haymarket"', () => {
-      expect(mbta.stopsBetweenStations('Green', 'Kenmore', 'Green', 'Government Center')).toBe(6);
+      expect(mbta.stopsBetweenStations('Green', 'Kenmore',
+        'Green', 'Government Center')).to.equal(6);
     });
 
   });
@@ -32,12 +37,12 @@ describe('mbta', () => {
 
     it('goes from "North Station" to "Forest Hills"', () => {
       expect(mbta.stopsBetweenStations('Orange', 'North Station', 'Orange',
-                                       'Forest Hills')).toBe(7);
+                                       'Forest Hills')).to.equal(7);
     });
 
     it('goes from "Forest Hills" to "North Station"', () => {
       expect(mbta.stopsBetweenStations('Orange', 'Forest Hills', 'Orange',
-                                       'North Station')).toBe(7);
+                                       'North Station')).to.equal(7);
     });
 
   });
@@ -45,11 +50,11 @@ describe('mbta', () => {
   describe('Red and Green Lines', () => {
 
     it('goes from "South Station" to "Kenmore"', () => {
-      expect(mbta.stopsBetweenStations('Red', 'South Station', 'Green', 'Kenmore')).toBe(6);
+      expect(mbta.stopsBetweenStations('Red', 'South Station', 'Green', 'Kenmore')).to.equal(6);
     });
 
     it('goes from "Government Center" to "Alewife"', () => {
-      expect(mbta.stopsBetweenStations('Green', 'Government Center', 'Red', 'Alewife')).toBe(7);
+      expect(mbta.stopsBetweenStations('Green', 'Government Center', 'Red', 'Alewife')).to.equal(7);
     });
 
   });
@@ -57,11 +62,12 @@ describe('mbta', () => {
   describe('Red and Orange Lines', () => {
 
     it('goes from "South Station" to "Forest Hills"', () => {
-      expect(mbta.stopsBetweenStations('Red', 'South Station', 'Orange', 'Forest Hills')).toBe(6);
+      expect(mbta.stopsBetweenStations('Red', 'South Station',
+        'Orange', 'Forest Hills')).to.equal(6);
     });
 
     it('goes from "North Station" to "Alewife"', () => {
-      expect(mbta.stopsBetweenStations('Orange', 'North Station', 'Red', 'Alewife')).toBe(8);
+      expect(mbta.stopsBetweenStations('Orange', 'North Station', 'Red', 'Alewife')).to.equal(8);
     });
 
   });
@@ -70,11 +76,11 @@ describe('mbta', () => {
 
     it('goes from "Government Center" to "Forest Hills"', () => {
       expect(mbta.stopsBetweenStations('Green', 'Government Center', 'Orange',
-                                       'Forest Hills')).toBe(6);
+                                       'Forest Hills')).to.equal(6);
     });
 
     it('goes from "North Station" to "Kenmore"', () => {
-      expect(mbta.stopsBetweenStations('Orange', 'North Station', 'Green', 'Kenmore')).toBe(7);
+      expect(mbta.stopsBetweenStations('Orange', 'North Station', 'Green', 'Kenmore')).to.equal(7);
     });
 
   });
