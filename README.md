@@ -9,7 +9,7 @@ Fork, clone, branch (practice) and npm install
 ## Objectives
 
 -   Practice with functions, lists (arrays), and  dictionaries (object literal).
--   You may submit a pull request for this practice, but it is not required.
+-   When you complete the practice, please submit a pull request.
 
 ## Activity
 
