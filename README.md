@@ -1,4 +1,4 @@
-![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 # MBTA practice
 
@@ -9,7 +9,7 @@ Fork, clone, branch (practice) and npm install
 ## Objectives
 
 -   Practice with functions, lists (arrays), and  dictionaries (object literal).
--   You may submit a pull request for this practice, but it is not required.
+-   When you complete the practice, please submit a pull request.
 
 ## Activity
 
@@ -57,5 +57,6 @@ This bonus is completely optional and does not have tests, yet.
 
 ## [License](LICENSE)
 
-Source code distributed under the MIT license. Text and other assets copyright
-General Assembly, Inc., all rights reserved.
+1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
+1.  All software code is licensed under GNU GPLv3. For commercial use or
+    alternative licensing, please contact legal@ga.co.
