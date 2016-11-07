@@ -17,11 +17,15 @@ describe('mbta', () => {
       expect(mbta.stopsBetweenStations('Red', 'South Station', 'Red', 'Alewife')).to.equal(7);
     });
 
+    it('goes from "Kendall" to "Davis"', () => {
+      expect(mbta.stopsBetweenStations('Red', 'Kendall', 'Red', 'Davis')).to.equal(4);
+    });
+
   });
 
   describe('Green Line', () => {
 
-    it('goes from "Haymarket" to "copley"', () => {
+    it('goes from "Haymarket" to "Copley"', () => {
       expect(mbta.stopsBetweenStations('Green', 'Government Center',
         'Green', 'Kenmore')).to.equal(6);
     });
@@ -29,6 +33,10 @@ describe('mbta', () => {
     it('goes from "Copley" to "Haymarket"', () => {
       expect(mbta.stopsBetweenStations('Green', 'Kenmore',
         'Green', 'Government Center')).to.equal(6);
+    });
+
+    it('goes from "Boylston" to "Hynes"', () => {
+      expect(mbta.stopsBetweenStations('Green', 'Boylston', 'Green', 'Hynes')).to.equal(3);
     });
 
   });
@@ -43,6 +51,11 @@ describe('mbta', () => {
     it('goes from "Forest Hills" to "North Station"', () => {
       expect(mbta.stopsBetweenStations('Orange', 'Forest Hills', 'Orange',
                                        'North Station')).to.equal(7);
+    });
+
+    it('goes from "Haymarket" to "North Station"', () => {
+      expect(mbta.stopsBetweenStations('Orange', 'Haymarket', 'Orange',
+                                       'North Station')).to.equal(1);
     });
 
   });
